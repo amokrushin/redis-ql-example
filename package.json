@@ -1,0 +1,30 @@
+{
+  "name": "dummy-redis-worker",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "lint": "eslint lib"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "author": "Anton Mokrushin <anton@mokr.org>",
+  "license": "MIT",
+  "dependencies": {
+    "@amokrushin/redis-leader": "^0.1.6",
+    "@amokrushin/redis-queue": "^0.1.7",
+    "@amokrushin/watchdog": "^0.1.4",
+    "dotenv": "^5.0.1",
+    "ioredis": "^3.2.2",
+    "lodash.defaults": "^4.2.0",
+    "lodash.flow": "^3.5.0",
+    "lorem-ipsum": "^1.0.4",
+    "yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "pre-commit": "^1.2.2"
+  }
+}

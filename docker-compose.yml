@@ -1,0 +1,22 @@
+version: '3.1'
+services:
+  redis:
+    image: redis:3.2.11-alpine
+    volumes:
+      - ./data:/data
+    networks:
+      - redis-ql-net
+    restart: unless-stopped
+
+  redis-ql:
+    build: .
+    environment:
+      - REDIS_HOST=redis
+    depends_on:
+      - redis
+    networks:
+      - redis-ql-net
+    restart: unless-stopped
+
+networks:
+  redis-ql-net:
